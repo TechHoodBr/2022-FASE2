@@ -1,0 +1,74 @@
+<nb-card>
+    <nb-card-header>
+        <div class="row">
+            <div class="col">
+                <h4>Ranking Candidatos</h4>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <nb-accordion>
+            <nb-accordion-item style="background-color: rgb(241, 241, 241);" #itemFilter>
+                <nb-accordion-item-header>
+                    <nb-action>
+                        <nb-icon class="action-icon" icon="search-outline"></nb-icon>
+                        <span>Filtro</span>
+                    </nb-action>
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="inputNome" class="label">Nome</label>
+                                <input type="text" nbInput fullWidth id="inputNome" name="inputNome" placeholder="Nome"
+                                    [(ngModel)]="search.nome">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="inputCPF" class="label">CPF</label>
+                                <input type="text" nbInput fullWidth id="inputCPF" name="inputCPF" placeholder="CPF"
+                                    [(ngModel)]="search.cpf">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="inputEmail" class="label">Email</label>
+                                <input type="email" nbInput fullWidth id="inputEmail" name="inputEmail"
+                                    placeholder="Email" [(ngModel)]="search.email">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="selectSkills" class="label">Skill's</label>
+                                <nb-select multiple fullWidth placeholder="Skill's" id="selectSkills"
+                                    name="selectSkills" [(ngModel)]="searchSkills">
+                                    <nb-option *ngFor="let item of dataSkills" value="{{item.id}}">{{item.nome}}
+                                    </nb-option>
+                                </nb-select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="selectCertifieds" class="label">Certificado's</label>
+                                <nb-select multiple fullWidth placeholder="Certificados" id="selectCertifieds"
+                                    name="selectCertifieds" [(ngModel)]="searchCertifieds">
+                                    <nb-option *ngFor="let item of dataCertifieds" value="{{item.id}}">
+                                        {{item.nome}}
+                                    </nb-option>
+                                </nb-select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" fullWidth status="primary" (click)="onSearch()" nbButton>Buscar</button>
+
+                </nb-accordion-item-body>
+            </nb-accordion-item>
+
+        </nb-accordion>
+
+        <ng2-smart-table [settings]="settings" [source]="source">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>

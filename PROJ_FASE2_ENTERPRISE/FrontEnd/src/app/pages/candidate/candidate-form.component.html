@@ -1,0 +1,121 @@
+<div class="row">
+    <div class="col-md-6">
+        <nb-card>
+            <nb-card-header>Registro ID <b>#{{data.id}}</b></nb-card-header>
+            <nb-card-body>
+                <form [formGroup]="formCandidate" (ngSubmit)="onSubmit()">
+                    <div class="form-group row">
+                        <label for="nome" class="label col-sm-3 col-form-label">Nome</label>
+                        <div class="col-sm-9">
+                            <input type="text" nbInput fullWidth placeholder="Nome" name="nome" formControlName="nome"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cpf" class="label col-sm-3 col-form-label">CPF</label>
+                        <div class="col-sm-9">
+                            <input type="text" nbInput fullWidth placeholder="CPF" name="cpf" formControlName="cpf"
+                                required maxlength="11">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="label col-sm-3 col-form-label">E-mail</label>
+                        <div class="col-sm-9">
+                            <input type="email" nbInput fullWidth placeholder="E-mail" name="email"
+                                formControlName="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="telefone" class="label col-sm-3 col-form-label">Telefone</label>
+                        <div class="col-sm-9">
+                            <input type="text" nbInput fullWidth placeholder="Telefone" name="telefone"
+                                formControlName="telefone" required maxlength="11">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="genero" class="label col-sm-3 col-form-label">Genêro</label>
+                        <div class="col-sm-9">
+                            <div class="col-sm-9">
+                                <nb-radio-group class="row" formControlName="genero" name="genero">
+                                    <nb-radio [value]="'Masculino'">
+                                        Masculino
+                                    </nb-radio>
+                                    <nb-radio [value]="'Feminino'">
+                                        Feminino
+                                    </nb-radio>
+                                </nb-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="nascimento" class="label col-sm-3 col-form-label">Data de Nascimento</label>
+                        <div class="col-sm-9">
+                            <input type="date" nbInput fullWidth placeholder="Data de Nascimento" name="nascimento"
+                                formControlName="nascimento" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="selectSkills" class="label col-sm-3 col-form-label">Skill's</label>
+                        <div class="col-sm-9">
+                            <nb-select multiple fullWidth placeholder="Skill's" id="selectSkills" name="selectSkills"
+                                formControlName="skills">
+                                <nb-option *ngFor="let item of dataSkills" value="{{item.id}}">{{item.nome}}
+                                </nb-option>
+                            </nb-select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="selectCertifieds" class="label col-sm-3 col-form-label">Certificado's</label>
+                        <div class="col-sm-9">
+                            <nb-select multiple fullWidth placeholder="Certificados" id="selectCertifieds"
+                                name="selectCertifieds" formControlName="certifieds">
+                                <nb-option *ngFor="let item of dataCertifieds" value="{{item.id}}">
+                                    {{item.nome}}
+                                </nb-option>
+                            </nb-select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEstado" class="label col-sm-3 col-form-label">Estado</label>
+                        <div class="col-sm-9">
+                            <nb-radio-group class="row" formControlName="inativo">
+                                <nb-radio [value]="false">
+                                    Habilitado
+                                </nb-radio>
+                                <nb-radio [value]="true">
+                                    Desabilitado
+                                </nb-radio>
+                            </nb-radio-group>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label></label>
+                        <div class="row justify-content-around">
+
+                            <button type="button" nbButton (click)="onBack()">Cancelar</button>
+
+                            <button type="submit" nbButton status="primary" [disabled]="!formCandidate.valid">{{isNew ?
+                                'Criar'
+                                : 'Salvar'}}</button>
+                        </div>
+                    </div>
+                </form>
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-md-6">
+        <nb-card>
+            <nb-card-header>Informações</nb-card-header>
+            <nb-card-body>
+                <div class="col">
+                    <div class="row">
+                        <p>Atualizado:</p>&nbsp;{{data.atualizado | date:'dd/M/yyyy HH:mm:ss'}}
+                    </div>
+                    <div class="row">
+                        <p>Criado:</p>&nbsp;{{data.criado | date:'dd/M/yyyy HH:mm:ss'}}
+                    </div>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
