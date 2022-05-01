@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { dateUtil } from '../../@core/utils/Date.util';
+import { dateUtil } from '../../@core/utils/date.util';
 
 import { Router } from '@angular/router';
 import { NbToastrService } from '@nebular/theme';
