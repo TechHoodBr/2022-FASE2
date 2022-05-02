@@ -10,5 +10,5 @@
 
 export const environment = {
   production: false,
-  api: "https://techhood-brq-api.herokuapp.com"
+  api: "http://localhost:8080"
 };
