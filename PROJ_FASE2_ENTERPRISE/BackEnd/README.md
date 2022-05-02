@@ -10,7 +10,7 @@ RM88838 - Thais Brasil Lenhard
 RM86992 - Wellington dos Santos Ramos
 ```
 
-### Live
+### [Live](https://techhood-brq-api.herokuapp.com)
 
 ### Desenvolvimento
 
