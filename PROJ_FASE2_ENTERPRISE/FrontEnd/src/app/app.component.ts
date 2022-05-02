@@ -15,9 +15,15 @@ import { LoadingService } from './@core/utils/loading/loading.service';
 })
 export class AppComponent implements OnInit {
 
-  loading$ = this.loader.loading$;
+  loading: boolean;
 
-  constructor(private analytics: AnalyticsService, private seoService: SeoService, public loader: LoadingService) {
+  constructor(
+    private analytics: AnalyticsService,
+    private seoService: SeoService,
+    private loaderService: LoadingService) {
+    this.loaderService.isLoading.subscribe((loading) => {
+      this.loading = loading;
+    });
   }
 
   ngOnInit(): void {

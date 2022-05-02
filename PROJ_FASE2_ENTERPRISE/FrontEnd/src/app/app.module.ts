@@ -21,6 +21,7 @@ import {
 } from '@nebular/theme';
 import { NetworkInterceptor } from './@core/utils/network-interceptor.service';
 import { NbSpinnerModule } from '@nebular/theme';
+import { LoadingService } from './@core/utils/loading/loading.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +42,7 @@ import { NbSpinnerModule } from '@nebular/theme';
   ],
   bootstrap: [AppComponent],
   providers: [
+    LoadingService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: NetworkInterceptor,
