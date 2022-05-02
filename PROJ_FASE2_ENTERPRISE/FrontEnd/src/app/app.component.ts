@@ -6,14 +6,18 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from './@core/utils/analytics.service';
 import { SeoService } from './@core/utils/seo.service';
+import { LoadingService } from './@core/utils/loading/loading.service';
 
 @Component({
   selector: 'ngx-app',
-  template: '<router-outlet></router-outlet>',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
 
-  constructor(private analytics: AnalyticsService, private seoService: SeoService) {
+  loading$ = this.loader.loading$;
+
+  constructor(private analytics: AnalyticsService, private seoService: SeoService, public loader: LoadingService) {
   }
 
   ngOnInit(): void {
