@@ -24,6 +24,10 @@ public class EnderecoEntity {
     @GeneratedValue(generator = "enderecoSequenceGenerator")
     private Long id;
 
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_usuario", foreignKey = @ForeignKey(name = "fk_spm_endereco_usuario"))
+    private UsuarioEntity usuario;
+
     @Column(name = "nm_endereco", length = 255)
     private String endereco;
 
@@ -37,16 +41,8 @@ public class EnderecoEntity {
     private String complemento;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_pais", foreignKey = @ForeignKey(name = "fk_spm_endereco_pais"))
-    private PaisEntity pais;
-
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_cidade", foreignKey = @ForeignKey(name = "fk_spm_endereco_cidade"))
     private CidadeEntity cidade;
-
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_estado", foreignKey = @ForeignKey(name = "fk_spm_endereco_estado"))
-    private EstadoEntity estado;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
@@ -96,28 +92,12 @@ public class EnderecoEntity {
         this.complemento = complemento;
     }
 
-    public PaisEntity getPais() {
-        return pais;
-    }
-
-    public void setPais(PaisEntity pais) {
-        this.pais = pais;
-    }
-
     public CidadeEntity getCidade() {
         return cidade;
     }
 
     public void setCidade(CidadeEntity cidade) {
         this.cidade = cidade;
-    }
-
-    public EstadoEntity getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoEntity estado) {
-        this.estado = estado;
     }
 
     public Calendar getDataCriacao() {
@@ -136,17 +116,24 @@ public class EnderecoEntity {
         this.ativo = ativo;
     }
 
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
         return "EnderecoEntity{" +
                 "id=" + id +
+                ", usuario=" + usuario +
                 ", endereco='" + endereco + '\'' +
                 ", numero='" + numero + '\'' +
                 ", cep='" + cep + '\'' +
                 ", complemento='" + complemento + '\'' +
-                ", pais=" + pais +
                 ", cidade=" + cidade +
-                ", estado=" + estado +
                 ", dataCriacao=" + dataCriacao +
                 ", ativo=" + ativo +
                 '}';

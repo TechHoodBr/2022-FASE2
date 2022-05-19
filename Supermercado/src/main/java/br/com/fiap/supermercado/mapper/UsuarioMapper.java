@@ -28,8 +28,6 @@ public class UsuarioMapper {
             usuario.setSobrenome(usuarioEntity.getSobrenome());
             usuario.setApelido(usuarioEntity.getApelido());
             usuario.setFoto(usuarioEntity.getFoto());
-            usuario.setTelefones(telefoneMapper.converterDTOS(usuarioEntity.getTelefones()));
-            usuario.setEndereco(enderecoMapper.converterDTO(usuarioEntity.getEndereco()));
             usuario.setGrupo(grupoMapper.converterDTO(usuarioEntity.getGrupo()));
             usuario.setCriado(usuarioEntity.getDataCriacao());
             usuario.setAtivo(usuarioEntity.getAtivo());

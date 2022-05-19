@@ -24,6 +24,10 @@ public class CidadeEntity {
 	@GeneratedValue(generator = "cidadeSequenceGenerator")
 	private Long id;
 
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_estado", foreignKey = @ForeignKey(name = "fk_spm_cidade_estado"))
+	private EstadoEntity estado;
+
 	@Column(name = "nm_cidade", length = 100)
 	private String cidade;
 
@@ -67,10 +71,19 @@ public class CidadeEntity {
 		this.ativo = ativo;
 	}
 
+	public EstadoEntity getEstado() {
+		return estado;
+	}
+
+	public void setEstado(EstadoEntity estado) {
+		this.estado = estado;
+	}
+
 	@Override
 	public String toString() {
 		return "CidadeEntity{" +
 				"id=" + id +
+				", estado=" + estado +
 				", cidade='" + cidade + '\'' +
 				", dataCriacao=" + dataCriacao +
 				", ativo=" + ativo +

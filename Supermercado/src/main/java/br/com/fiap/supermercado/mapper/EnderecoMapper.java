@@ -29,8 +29,6 @@ public class EnderecoMapper {
             endereco.setCep(enderecoEntity.getCep());
             endereco.setComplemento(enderecoEntity.getComplemento());
             endereco.setCidade(cidadeMapper.converterDTO(enderecoEntity.getCidade()));
-            endereco.setEstado(estadoMapper.converterDTO(enderecoEntity.getEstado()));
-            endereco.setPais(paisMapper.converterDTO(enderecoEntity.getPais()));
             endereco.setCriado(enderecoEntity.getDataCriacao());
             endereco.setAtivo(enderecoEntity.getAtivo());
             return endereco;

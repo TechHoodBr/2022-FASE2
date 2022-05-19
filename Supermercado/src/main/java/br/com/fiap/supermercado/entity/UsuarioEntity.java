@@ -50,13 +50,6 @@ public class UsuarioEntity {
 	@JoinColumn(name = "id_grupo", foreignKey = @ForeignKey(name = "fk_spm_usuario_grupo"))
 	private GrupoEntity grupo;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "usuario")
-	private List<TelefoneEntity> telefones;
-
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_endereco", foreignKey = @ForeignKey(name = "fk_spm_usuario_endereco"))
-	private EnderecoEntity endereco;
-
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "dh_criacao")
@@ -70,7 +63,7 @@ public class UsuarioEntity {
 	private Boolean ativo;
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "status_id", foreignKey = @ForeignKey(name = "fk_spm_usuario_status"))
+	@JoinColumn(name = "id_status", foreignKey = @ForeignKey(name = "fk_spm_usuario_status"))
 	private StatusEntity status;
 
 	public Long getId() {
@@ -119,22 +112,6 @@ public class UsuarioEntity {
 
 	public void setGrupo(GrupoEntity grupo) {
 		this.grupo = grupo;
-	}
-
-	public List<TelefoneEntity> getTelefones() {
-		return telefones;
-	}
-
-	public void setTelefones(List<TelefoneEntity> telefones) {
-		this.telefones = telefones;
-	}
-
-	public EnderecoEntity getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(EnderecoEntity endereco) {
-		this.endereco = endereco;
 	}
 
 	public Calendar getDataCriacao() {
@@ -205,8 +182,6 @@ public class UsuarioEntity {
 				", senha='" + senha + '\'' +
 				", foto='" + foto + '\'' +
 				", grupo=" + grupo +
-				", telefones=" + telefones +
-				", endereco=" + endereco +
 				", dataCriacao=" + dataCriacao +
 				", ultimoAcesso=" + ultimoAcesso +
 				", ativo=" + ativo +

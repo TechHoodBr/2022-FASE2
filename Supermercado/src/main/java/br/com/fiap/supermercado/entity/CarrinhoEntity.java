@@ -25,16 +25,22 @@ public class CarrinhoEntity {
     @GeneratedValue(generator = "carrinhoSequenceGenerator")
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "produto_id", foreignKey = @ForeignKey(name = "fk_spm_carrinho_produto"))
-    private ProdutoEntity produto;
+    @Column(name = "cd_pedido", length = 100)
+    private String pedido;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "usuario_id", foreignKey = @ForeignKey(name = "fk_spm_usuario_produto"))
+    @JoinColumn(name = "id_produto", foreignKey = @ForeignKey(name = "fk_spm_carrinho_produto"))
+    private ProdutoEntity produto;
+
+    @Column(name = "nr_quantidade")
+    private Integer quantidade;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_usuario", foreignKey = @ForeignKey(name = "fk_spm_carrinho_usuario"))
     private UsuarioEntity usuario;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "status_id", foreignKey = @ForeignKey(name = "fk_spm_status_produto"))
+    @JoinColumn(name = "id_status", foreignKey = @ForeignKey(name = "fk_spm_carrinho_status"))
     private StatusEntity status;
 
     public Long getId() {
@@ -69,11 +75,29 @@ public class CarrinhoEntity {
         this.status = status;
     }
 
+    public String getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(String pedido) {
+        this.pedido = pedido;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
     @Override
     public String toString() {
         return "CarrinhoEntity{" +
                 "id=" + id +
+                ", pedido='" + pedido + '\'' +
                 ", produto=" + produto +
+                ", quantidade=" + quantidade +
                 ", usuario=" + usuario +
                 ", status=" + status +
                 '}';
