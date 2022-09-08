@@ -15,10 +15,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/usuario",
+							"raw": "http://msolutions.com.br:8080/usuario",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -34,10 +36,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/usuario/1",
+							"raw": "http://msolutions.com.br:8080/usuario/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -63,10 +67,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/usuario",
+							"raw": "http://msolutions.com.br:8080/usuario",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -91,10 +97,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/usuario/7",
+							"raw": "http://msolutions.com.br:8080/usuario/7",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -111,10 +119,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/usuario/7",
+							"raw": "http://msolutions.com.br:8080/usuario/7",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -136,10 +146,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/tipoUsuario",
+							"raw": "http://msolutions.com.br:8080/tipoUsuario",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -155,10 +167,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/tipoUsuario/1",
+							"raw": "http://msolutions.com.br:8080/tipoUsuario/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -184,10 +198,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/tipoUsuario",
+							"raw": "http://msolutions.com.br:8080/tipoUsuario",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -212,10 +228,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/tipoUsuario/3",
+							"raw": "http://msolutions.com.br:8080/tipoUsuario/3",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -232,10 +250,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/tipoUsuario/3",
+							"raw": "http://msolutions.com.br:8080/tipoUsuario/3",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -257,10 +277,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/plano",
+							"raw": "http://msolutions.com.br:8080/plano",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -276,10 +298,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/plano/1",
+							"raw": "http://msolutions.com.br:8080/plano/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -305,10 +329,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/plano",
+							"raw": "http://msolutions.com.br:8080/plano",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -333,10 +359,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/plano/4",
+							"raw": "http://msolutions.com.br:8080/plano/4",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -353,10 +381,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/plano/4",
+							"raw": "http://msolutions.com.br:8080/plano/4",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -378,10 +408,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aula",
+							"raw": "http://msolutions.com.br:8080/aula",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -397,10 +429,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aula/1",
+							"raw": "http://msolutions.com.br:8080/aula/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -426,10 +460,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aula",
+							"raw": "http://msolutions.com.br:8080/aula",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -454,10 +490,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aula/9",
+							"raw": "http://msolutions.com.br:8080/aula/9",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -474,10 +512,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aula/9",
+							"raw": "http://msolutions.com.br:8080/aula/9",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -499,10 +539,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aulaMateriais",
+							"raw": "http://msolutions.com.br:8080/aulaMateriais",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -518,10 +560,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aulaMateriais/1",
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -547,10 +591,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aulaMateriais",
+							"raw": "http://msolutions.com.br:8080/aulaMateriais",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -575,10 +621,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/aulaMateriais/4",
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/4",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
@@ -595,10 +643,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/aulaMateriais/4",
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/4",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"msolutions",
+								"com",
+								"br"
 							],
 							"port": "8080",
 							"path": [
