@@ -40,14 +40,14 @@ public class PlanoServiceImpl implements PlanoService {
     }
 
     @Override
-    public PlanoDTO atualizar(Long id, PlanoDTO objeto) {
+    public PlanoDTO atualizarPorId(Long id, PlanoDTO objeto) {
         objeto.setId(id);
         PlanoEntity planoEntity = planoRepository.save(planoMapper.convert(objeto));
         return planoMapper.convert(planoEntity);
     }
 
     @Override
-    public void deletar(Long id) {
+    public void deletarPorId(Long id) {
         planoRepository.deleteById(id);
     }
 }

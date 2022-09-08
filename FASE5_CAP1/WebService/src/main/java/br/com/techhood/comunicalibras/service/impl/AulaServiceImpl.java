@@ -40,14 +40,14 @@ public class AulaServiceImpl implements AulaService {
     }
 
     @Override
-    public AulaDTO atualizar(Long id, AulaDTO objeto) {
+    public AulaDTO atualizarPorId(Long id, AulaDTO objeto) {
         objeto.setId(id);
         AulaEntity aulaEntity = aulaRepository.save(aulaMapper.convert(objeto));
         return aulaMapper.convert(aulaEntity);
     }
 
     @Override
-    public void deletar(Long id) {
+    public void deletarPorId(Long id) {
         aulaRepository.deleteById(id);
     }
 }

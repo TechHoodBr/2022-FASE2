@@ -30,13 +30,13 @@ public class RestCrudController<T> implements CrudService<T> {
 
     @Override
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public T atualizar(@PathVariable("id") Long id, @RequestBody T objeto) {
-        return crudService.atualizar(id, objeto);
+    public T atualizarPorId(@PathVariable("id") Long id, @RequestBody T objeto) {
+        return crudService.atualizarPorId(id, objeto);
     }
 
     @Override
-    @DeleteMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void deletar(@PathVariable("id") Long id) {
-        crudService.deletar(id);
+    @DeleteMapping(value = "/{id}")
+    public void deletarPorId(@PathVariable("id") Long id) {
+        crudService.deletarPorId(id);
     }
 }

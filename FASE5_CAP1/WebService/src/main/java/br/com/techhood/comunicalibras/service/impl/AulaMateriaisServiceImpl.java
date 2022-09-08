@@ -40,14 +40,14 @@ public class AulaMateriaisServiceImpl implements AulaMateriaisService {
     }
 
     @Override
-    public AulaMateriaisDTO atualizar(Long id, AulaMateriaisDTO objeto) {
+    public AulaMateriaisDTO atualizarPorId(Long id, AulaMateriaisDTO objeto) {
         objeto.setId(id);
         AulaMateriaisEntity aulaMateriaisEntity = aulaMateriaisRepository.save(aulaMateriaisMapper.convert(objeto));
         return aulaMateriaisMapper.convert(aulaMateriaisEntity);
     }
 
     @Override
-    public void deletar(Long id) {
+    public void deletarPorId(Long id) {
         aulaMateriaisRepository.deleteById(id);
     }
 }

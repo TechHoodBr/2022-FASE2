@@ -25,7 +25,7 @@ public class AulaMateriaisEntity {
     @GeneratedValue(generator = "aulaMateriaisSequenceGenerator")
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "id_aula", foreignKey = @ForeignKey(name = "fk_cml_aula_materiais_aula"))
     private AulaEntity aula;
 

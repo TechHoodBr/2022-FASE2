@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "4b1f2036-74e1-46a2-ac6e-085608f10a52",
+		"name": "Fiap - Comunica Libras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6405106"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "buscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Professor 4\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Professor 4.2\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo Usuario",
+			"item": [
+				{
+					"name": "buscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tipoUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tipoUsuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Consultor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Consultor(a)\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipoUsuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tipoUsuario/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plano",
+			"item": [
+				{
+					"name": "buscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plano",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plano"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plano/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plano",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Free\",\n    \"codigo\": \"FREE\",\n    \"valor\": 0.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plano",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plano"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Free 100%\",\n    \"codigo\": \"FREE\",\n    \"valor\": 0.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plano/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plano",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/plano/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plano",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aula",
+			"item": [
+				{
+					"name": "buscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aula",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aula/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Titulo de Teste\",\n    \"professor\": {\n        \"id\": 1,\n        \"tipoUsuario\": {\n            \"id\": 1\n        },\n        \"plano\": {\n            \"id\": 1\n        }\n    },\n    \"live_inicio\": \"2022-08-27T09:00:00\",\n    \"live_fim\": \"2022-08-27T10:00:00\",\n    \"descricao\": \"Descrição de Teste\",\n    \"video\": \"http://www.HOSTNAME.com.br/video/videoTeste.mp4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aula",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"titulo\": \"Titulo de Teste 123\",\n    \"professor\": {\n        \"id\": 1,\n        \"nome\": null,\n        \"login\": null,\n        \"senha\": null,\n        \"tipoUsuario\": {\n            \"id\": 1,\n            \"nome\": null\n        },\n        \"plano\": {\n            \"id\": 1,\n            \"nome\": null,\n            \"codigo\": null,\n            \"valor\": null\n        }\n    },\n    \"live_inicio\": \"2022-08-27T09:00:00\",\n    \"live_fim\": \"2022-08-27T10:00:00\",\n    \"descricao\": \"Descrição de Teste\",\n    \"video\": \"http://www.HOSTNAME.com.br/video/videoTeste.mp4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aula/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aula/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aula Materiais",
+			"item": [
+				{
+					"name": "buscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aulaMateriais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aulaMateriais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aula\": {\n        \"id\": 1\n    },\n    \"nome_arquivo\": \"Novo Material Teste.pdf\",\n    \"arquivo\": \"http://www.HOSTNAME.com.br/material/Novo Material Teste.pdf\",\n    \"upload\": \"2022-08-27T11:00:00\",\n    \"baixado\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aulaMateriais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizarPorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aula\": {\n        \"id\": 1\n    },\n    \"nome_arquivo\": \"Novo Material Teste 123.pdf\",\n    \"arquivo\": \"http://www.HOSTNAME.com.br/material/Novo Material Teste.pdf\",\n    \"upload\": \"2022-08-27T11:00:00\",\n    \"baixado\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/aulaMateriais/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletarPorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/aulaMateriais/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

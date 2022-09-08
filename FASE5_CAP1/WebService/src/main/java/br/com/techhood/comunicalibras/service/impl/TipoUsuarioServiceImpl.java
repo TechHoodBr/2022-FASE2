@@ -40,14 +40,14 @@ public class TipoUsuarioServiceImpl implements TipoUsuarioService {
     }
 
     @Override
-    public TipoUsuarioDTO atualizar(Long id, TipoUsuarioDTO objeto) {
+    public TipoUsuarioDTO atualizarPorId(Long id, TipoUsuarioDTO objeto) {
         objeto.setId(id);
         TipoUsuarioEntity tipoUsuarioEntity = tipoUsuarioRepository.save(tipoUsuarioMapper.convert(objeto));
         return tipoUsuarioMapper.convert(tipoUsuarioEntity);
     }
 
     @Override
-    public void deletar(Long id) {
+    public void deletarPorId(Long id) {
         tipoUsuarioRepository.deleteById(id);
     }
 }
