@@ -527,6 +527,86 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "arquivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aula/1/arquivos",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1",
+								"arquivos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arquivo (Upload)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/Users/fholanda/Downloads/1 - Aula 1 - Saudações e Apresentações.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aula/1/arquivo",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1",
+								"arquivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arquivo (Download)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aula/1/arquivo/1%20-%20Aula%201%20-%20Saudações%20e%20Apresentações.mp4",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"1",
+								"arquivo",
+								"1%20-%20Aula%201%20-%20Saudações%20e%20Apresentações.mp4"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -654,6 +734,86 @@
 							"path": [
 								"aulaMateriais",
 								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arquivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/1/arquivos",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"1",
+								"arquivos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arquivo (Upload)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "arquivo",
+									"type": "file",
+									"src": "/Users/fholanda/Downloads/DeviceLog.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/2/arquivo",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"2",
+								"arquivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arquivo (Download)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/1/arquivo/DeviceLog.txt",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"1",
+								"arquivo",
+								"DeviceLog.txt"
 							]
 						}
 					},
