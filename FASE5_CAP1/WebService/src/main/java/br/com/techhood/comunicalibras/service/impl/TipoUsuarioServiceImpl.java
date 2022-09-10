@@ -2,10 +2,12 @@ package br.com.techhood.comunicalibras.service.impl;
 
 import br.com.techhood.comunicalibras.dto.TipoUsuarioDTO;
 import br.com.techhood.comunicalibras.entity.TipoUsuarioEntity;
+import br.com.techhood.comunicalibras.entity.UsuarioEntity;
 import br.com.techhood.comunicalibras.mapper.TipoUsuarioMapper;
 import br.com.techhood.comunicalibras.repository.TipoUsuarioRepository;
 import br.com.techhood.comunicalibras.service.TipoUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,5 +51,11 @@ public class TipoUsuarioServiceImpl implements TipoUsuarioService {
     @Override
     public void deletarPorId(Long id) {
         tipoUsuarioRepository.deleteById(id);
+    }
+
+    @Override
+    public List<TipoUsuarioDTO> buscar(TipoUsuarioDTO objeto) {
+        Example<TipoUsuarioEntity> exampleEntity = Example.of(tipoUsuarioMapper.convert(objeto));
+        return tipoUsuarioMapper.convert(tipoUsuarioRepository.findAll(exampleEntity));
     }
 }

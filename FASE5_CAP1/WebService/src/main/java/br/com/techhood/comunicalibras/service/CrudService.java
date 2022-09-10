@@ -9,4 +9,5 @@ public interface CrudService<T> {
     T inserir(T objeto);
     T atualizarPorId(Long id, T objeto);
     void deletarPorId(Long id);
+    List<T> buscar(T objeto);
 }

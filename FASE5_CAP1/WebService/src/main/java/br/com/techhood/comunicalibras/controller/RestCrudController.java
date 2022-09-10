@@ -39,4 +39,10 @@ public class RestCrudController<T> implements CrudService<T> {
     public void deletarPorId(@PathVariable("id") Long id) {
         crudService.deletarPorId(id);
     }
+
+    @Override
+    @PostMapping(value = "/buscar", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<T> buscar(T objeto) {
+        return crudService.buscar(objeto);
+    }
 }

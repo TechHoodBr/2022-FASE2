@@ -6,6 +6,7 @@ import br.com.techhood.comunicalibras.mapper.AulaMapper;
 import br.com.techhood.comunicalibras.repository.AulaRepository;
 import br.com.techhood.comunicalibras.service.AulaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,5 +50,11 @@ public class AulaServiceImpl implements AulaService {
     @Override
     public void deletarPorId(Long id) {
         aulaRepository.deleteById(id);
+    }
+
+    @Override
+    public List<AulaDTO> buscar(AulaDTO objeto) {
+        Example<AulaEntity> exampleEntity = Example.of(aulaMapper.convert(objeto));
+        return aulaMapper.convert(aulaRepository.findAll(exampleEntity));
     }
 }

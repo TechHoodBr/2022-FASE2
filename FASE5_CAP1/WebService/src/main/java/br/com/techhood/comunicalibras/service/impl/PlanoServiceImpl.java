@@ -6,6 +6,7 @@ import br.com.techhood.comunicalibras.mapper.PlanoMapper;
 import br.com.techhood.comunicalibras.repository.PlanoRepository;
 import br.com.techhood.comunicalibras.service.PlanoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,5 +50,11 @@ public class PlanoServiceImpl implements PlanoService {
     @Override
     public void deletarPorId(Long id) {
         planoRepository.deleteById(id);
+    }
+
+    @Override
+    public List<PlanoDTO> buscar(PlanoDTO objeto) {
+        Example<PlanoEntity> exampleEntity = Example.of(planoMapper.convert(objeto));
+        return planoMapper.convert(planoRepository.findAll(exampleEntity));
     }
 }

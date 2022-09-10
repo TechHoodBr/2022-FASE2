@@ -6,6 +6,7 @@ import br.com.techhood.comunicalibras.mapper.UsuarioMapper;
 import br.com.techhood.comunicalibras.repository.UsuarioRepository;
 import br.com.techhood.comunicalibras.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,5 +50,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public void deletarPorId(Long id) {
         usuarioRepository.deleteById(id);
+    }
+
+    @Override
+    public List<UsuarioDTO> buscar(UsuarioDTO objeto) {
+        Example<UsuarioEntity> exampleEntity = Example.of(usuarioMapper.convert(objeto));
+        return usuarioMapper.convert(usuarioRepository.findAll(exampleEntity));
     }
 }
