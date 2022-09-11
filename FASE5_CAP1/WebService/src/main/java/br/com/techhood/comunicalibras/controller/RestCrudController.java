@@ -42,7 +42,7 @@ public class RestCrudController<T> implements CrudService<T> {
 
     @Override
     @PostMapping(value = "/buscar", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<T> buscar(T objeto) {
+    public List<T> buscar(@RequestBody T objeto) {
         return crudService.buscar(objeto);
     }
 }
