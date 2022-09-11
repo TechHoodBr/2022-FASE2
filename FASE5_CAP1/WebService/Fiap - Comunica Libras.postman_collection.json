@@ -134,6 +134,35 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "buscar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Professor 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/buscar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"buscar"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -265,6 +294,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "buscar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Professor(a)\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/tipoUsuario/buscar",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"tipoUsuario",
+								"buscar"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -392,6 +452,37 @@
 							"path": [
 								"plano",
 								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Básico\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/plano/buscar",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"plano",
+								"buscar"
 							]
 						}
 					},
@@ -607,6 +698,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "buscar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"professor\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aula/buscar",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aula",
+								"buscar"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -773,7 +895,7 @@
 								{
 									"key": "arquivo",
 									"type": "file",
-									"src": "/Users/fholanda/Downloads/DeviceLog.txt"
+									"src": "/Users/fholanda/Downloads/2 - Família.pdf"
 								}
 							]
 						},
@@ -814,6 +936,72 @@
 								"1",
 								"arquivo",
 								"DeviceLog.txt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"professor\": {\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/aulaMateriais/buscar",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"aulaMateriais",
+								"buscar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"professor1\",\n    \"senha\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://msolutions.com.br:8080/login",
+							"protocol": "http",
+							"host": [
+								"msolutions",
+								"com",
+								"br"
+							],
+							"port": "8080",
+							"path": [
+								"login"
 							]
 						}
 					},
