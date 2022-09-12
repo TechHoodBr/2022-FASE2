@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ComunicaLibras</string>
+    <string name="error_email_invalid">Email Inválido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="entrar">Entrar</string>
+    <string name="sign_up_here">Ou cadastre-se aqui.</string>
+    <string name="appbar_title">Olá, %1$s</string>
+    <string name="call_now">Ligar Agora</string>
+</resources>
