@@ -42,6 +42,7 @@ public class UsuarioMapper {
             usuario.setSenha(usuarioEntity.getSenha());
             usuario.setTipoUsuario(tipoUsuarioMapper.convert(usuarioEntity.getTipoUsuario()));
             usuario.setPlano(planoMapper.convert(usuarioEntity.getPlano()));
+            usuario.setAvatar(usuarioEntity.getAvatar());
 
             return usuario;
         }
@@ -59,6 +60,7 @@ public class UsuarioMapper {
             usuario.setSenha(usuarioDTO.getSenha());
             usuario.setTipoUsuario(tipoUsuarioMapper.convert(usuarioDTO.getTipoUsuario()));
             usuario.setPlano(planoMapper.convert(usuarioDTO.getPlano()));
+            usuario.setAvatar(usuarioDTO.getAvatar());
 
             return usuario;
         }

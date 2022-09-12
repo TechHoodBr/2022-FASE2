@@ -1,6 +1,7 @@
 package br.com.techhood.comunicalibras.entity;
 
 import lombok.Data;
+import org.apache.logging.log4j.util.Strings;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -40,4 +41,22 @@ public class UsuarioEntity {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "id_plano", foreignKey = @ForeignKey(name = "fk_cml_usuario_plano"), nullable = false)
     private PlanoEntity plano;
+
+    @Column(name = "url_avatar", length = 1000)
+    private String avatar;
+
+    public String getAvatar() {
+        return avatarRequiredDefault(avatar);
+    }
+
+    private String avatarRequiredDefault(String avatar) {
+        if (avatar == null || Strings.isBlank(avatar)) {
+            avatar = "https://i.pravatar.cc/300";
+        }
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatarRequiredDefault(avatar);;
+    }
 }

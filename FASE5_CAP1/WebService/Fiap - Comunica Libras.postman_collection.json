@@ -59,7 +59,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Professor 4\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    }\n}",
+							"raw": "{\n    \"nome\": \"Professor 4\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    },\n    \"avatar\": \"https://i.pravatar.cc/300\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -67,12 +67,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://msolutions.com.br:8080/usuario",
+							"raw": "http://localhost:8080/usuario",
 							"protocol": "http",
 							"host": [
-								"msolutions",
-								"com",
-								"br"
+								"localhost"
 							],
 							"port": "8080",
 							"path": [
@@ -89,7 +87,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Professor 4.2\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    }\n}",
+							"raw": "{\n    \"nome\": \"Professor 4.2\",\n    \"login\": \"professor4\",\n    \"senha\": \"123\",\n    \"tipoUsuario\": {\n        \"id\": 1\n    },\n    \"plano\": {\n        \"id\": 1\n    },\n    \"avatar\": \"https://i.pravatar.cc/300\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"

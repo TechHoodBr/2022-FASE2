@@ -11,4 +11,5 @@ public class UsuarioDTO {
     private String senha;
     private TipoUsuarioDTO tipoUsuario;
     private PlanoDTO plano;
+    private String avatar;
 }

@@ -13,9 +13,9 @@ INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USU
 INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Professor 3', 'professor3', '123', 1, 1);
 
 -- Usuario - Alunos
-INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 1', 'aluno1', '123', 2, 1);
-INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 2', 'aluno2', '123', 2, 2);
-INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 3', 'aluno3', '123', 2, 3);
+INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO, AVATAR) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 1', 'aluno1', '123', 2, 1, 'https://i.pravatar.cc/300');
+INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO, AVATAR) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 2', 'aluno2', '123', 2, 2, 'https://i.pravatar.cc/300');
+INSERT INTO TB_CML_USUARIO (ID_USUARIO, NM_NOME, DS_LOGIN, DS_SENHA, ID_TIPO_USUARIO, ID_PLANO, AVATAR) VALUES (SEQ_CML_USUARIO.NEXTVAL, 'Aluno 3', 'aluno3', '123', 2, 3, 'https://i.pravatar.cc/300');
 
 -- Aulas - Gravadas
 INSERT INTO TB_CML_AULA (ID_AULA, ID_USUARIO, DS_TITULO, DT_INICIO_LIVE, DT_FIM_LIVE, DS_DESCRICAO, DS_URL_VIDEO) VALUES (SEQ_CML_AULA.NEXTVAL, 1, 'Aula 1 - Saudações e Apresentações', '27-08-2022 09:00:00', '27-08-2022 10:00:00', 'Em nossa primeira aula, tratamos do tema: Saudações e apresentações\r\nVídeo feito para o projeto Educopédia, parte de um curso criado para auxiliar os professores que trabalham na SME do Rio de Janeiro.\r\nAcessem o conteúdo teórico de nosso curso no site www.educopedia.com.br, nos menus "Educação Especial" - "Surdez".\r\nEste vídeo foi feito em parceria com o departamento de mídia da Educolibras (www.educolibras.com.br), que forneceu apoio tecnológico.\r\nMusic: Drops of H2O ( The Filtered Water Treatment) -B - J.Lang feat Airtone', 'http://www.msolutions.com.br/aula/1/arquivo/1 - Aula 1 - Saudações e Apresentações.mp4');
