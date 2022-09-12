@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">ComunicaLibras</string>
     <string name="error_email_invalid">Email Inválido</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="senha">Senha</string>
     <string name="login">Login</string>
@@ -9,4 +8,15 @@
     <string name="sign_up_here">Ou cadastre-se aqui.</string>
     <string name="appbar_title">Olá, %1$s</string>
     <string name="call_now">Ligar Agora</string>
+    <string name="sign_out">Sair</string>
+    <string name="comunica">COMUNICA</string>
+    <string name="libras">LIBRAS</string>
+    <string name="login_description">ENTRE COM SEUS DADOS:</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="email">Email</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="nome">Nome</string>
+    <string name="error_login">Login Inválido</string>
+    <string name="error_nome">Nome Inválido</string>
+    <string name="error_password">Senha Inválida</string>
 </resources>

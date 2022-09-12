@@ -5,8 +5,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Plano(
-    val codigo: String,
+    val codigo: String?=null,
     val id: Int,
-    val nome: String,
-    val valor: Double
+    val nome: String?=null,
+    val valor: Double?=null
 ): Parcelable

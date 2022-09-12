@@ -7,11 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.comunicalibras.MainActivity
 import com.example.comunicalibras.R
-import com.example.comunicalibras.data.models.Professor
 import com.example.comunicalibras.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -60,18 +58,20 @@ class LoginFragment : Fragment() {
             emailInputLayout.isErrorEnabled = true
             return
         }
+        if (emailInputLayout.isErrorEnabled) emailInputLayout.isErrorEnabled = false
 
         if (passwordInputEditText.text.isNullOrEmpty()) {
             passwordInputLayout.error = "Senha Inválida"
             passwordInputLayout.isErrorEnabled = true
             return
         }
+        if (passwordInputLayout.isErrorEnabled) passwordInputLayout.isErrorEnabled = false
 
         viewModel.login(emailInputEditText.text.toString(), passwordInputEditText.text.toString())
     }
 
     private fun signUp() {
-        Toast.makeText(context, "Sign Up clicked", Toast.LENGTH_SHORT).show()
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
     }
 
     private fun observers() {

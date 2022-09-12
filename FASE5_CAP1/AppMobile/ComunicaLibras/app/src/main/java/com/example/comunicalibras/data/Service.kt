@@ -40,4 +40,6 @@ class Service {
 
     suspend fun getClasses(): Response<List<Aula>> = api.getClasses()
 
+    suspend fun signUp(professor: Professor): Response<Professor> = api.signUp(professor)
+
 }

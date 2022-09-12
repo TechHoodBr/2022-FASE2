@@ -18,4 +18,10 @@ interface ApiService {
         @Body credentials : Credentials
     ): Response<Professor>
 
+    @POST("/usuario")
+    suspend fun signUp(
+        @Body user : Professor
+    ): Response<Professor>
+
+
 }

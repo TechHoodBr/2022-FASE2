@@ -39,7 +39,7 @@ class Session(private val sharedPref: SharedPreferences) {
         with (sharedPref.edit()) {
             putString(LOGIN, professor.login)
             putString(NOME, professor.nome)
-            putInt(ID, professor.id)
+            putInt(ID, professor.id?:0)
             putString(PLANO_CODIGO, professor.plano.codigo)
             putString(TIPO_USUARIO, professor.tipoUsuario.nome)
             putString(AVATAR, professor.avatar)

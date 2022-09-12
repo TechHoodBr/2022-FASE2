@@ -32,9 +32,10 @@ class AulaAdapter : ListAdapter<Aula, AulaAdapter.AulaViewHolder>(AulaDiffCallba
                 .load(aula.professor.avatar)
                 .into(binding.imageView)
 
-            binding.teacherName.text = aula.professor.nome
-            binding.teacherCity.text = "São Paulo - SP"
-            binding.clickableView.setOnClickListener { onClick.invoke(aula) }
+            binding.teacherName.text = aula.titulo
+            binding.teacherCity.text = aula.professor.nome
+            binding.card.setOnClickListener { onClick(aula) }
+            binding.textCallNow.setOnClickListener { onClick(aula) }
         }
     }
 }

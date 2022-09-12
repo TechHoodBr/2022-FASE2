@@ -76,8 +76,9 @@ class HomeFragment : Fragment() {
             layoutManager = linearLayoutManager
             adapter = aulaAdapter
         }
-        aulaAdapter.onClick = {
-            Toast.makeText(context, "aula clicked ${it.titulo}", Toast.LENGTH_SHORT).show()
+        aulaAdapter.onClick = { aula ->
+            val action = HomeFragmentDirections.actionHomeFragmentToRecordedClassFragment(aula)
+            findNavController().navigate(action)
         }
     }
 

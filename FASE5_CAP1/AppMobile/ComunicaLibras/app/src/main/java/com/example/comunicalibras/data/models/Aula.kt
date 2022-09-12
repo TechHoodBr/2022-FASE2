@@ -12,5 +12,5 @@ data class Aula(
     @SerializedName("live_inicio") val liveInicio: String,
     val professor: Professor,
     val titulo: String,
-    val video: String
+    val video: String? = ""
 ): Parcelable

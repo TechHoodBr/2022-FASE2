@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_yellow_mustard"
-    tools:context=".screens.login.LoginFragment">
+    tools:context=".screens.signUp.SignUpFragment">
 
     <TextView
         android:id="@+id/titleComunica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/bebas_neue"
         android:text="@string/comunica"
         android:textColor="@color/red"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="@string/login_description"
+        android:text="@string/cadastro"
         android:textColor="@color/navy_blue"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -55,17 +55,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:labelFor="@id/emailInputLayout"
+        android:labelFor="@id/nomeInputLayout"
+        android:text="@string/nome"
+        android:textColor="@color/navy_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/nomeInputLayout"
+        app:layout_constraintStart_toStartOf="@id/nomeInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/textDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nomeInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundColor="@color/navy_blue"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/loginLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome"
+            android:inputType="textWebEmailAddress"
+            android:textColor="@color/background_yellow_mustard"
+            android:textColorHint="@color/background_yellow_mustard" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/loginLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:labelFor="@id/nomeInputLayout"
         android:text="@string/login"
         android:textColor="@color/navy_blue"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/emailInputLayout"
-        app:layout_constraintStart_toStartOf="@id/emailInputLayout"
-        app:layout_constraintTop_toBottomOf="@id/textDescription" />
+        app:layout_constraintBottom_toTopOf="@id/loginInputLayout"
+        app:layout_constraintStart_toStartOf="@id/nomeInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/nomeInputLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInputLayout"
+        android:id="@+id/loginInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,10 +114,10 @@
         app:layout_constraintBottom_toTopOf="@id/passwordLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nomeLabel">
+        app:layout_constraintTop_toBottomOf="@+id/loginLabel">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailInputEditText"
+            android:id="@+id/loginInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login"
@@ -100,8 +138,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/passwordInputLayout"
-        app:layout_constraintStart_toStartOf="@id/emailInputLayout"
-        app:layout_constraintTop_toBottomOf="@id/emailInputLayout" />
+        app:layout_constraintStart_toStartOf="@id/nomeInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/loginInputLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
@@ -112,7 +150,7 @@
         android:layout_marginBottom="16dp"
         app:boxBackgroundColor="@color/navy_blue"
         app:hintEnabled="false"
-        app:layout_constraintBottom_toTopOf="@id/buttonEnter"
+        app:layout_constraintBottom_toTopOf="@id/buttonRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLabel">
@@ -129,30 +167,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonEnter"
+        android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="70dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/red"
-        android:text="@string/entrar"
-        app:layout_constraintBottom_toTopOf="@+id/textRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
-
-    <TextView
-        android:id="@+id/textRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="@string/sign_up_here"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="@string/cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEnter" />
+        app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
