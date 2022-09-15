@@ -51,7 +51,7 @@ class RecordedClassFragment : Fragment() {
     private fun setClassInfo() {
         binding.classTitle.text = aula.titulo
         binding.classTeacher.text = aula.professor.nome
-        binding.classDescription.text = aula.descricao
+        binding.classDescription.text = aula.descricao.replace("\\n", "\n")
     }
 
     private fun setPlayer() = with(binding) {
