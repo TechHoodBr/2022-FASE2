@@ -5,6 +5,7 @@ import br.com.techhood.comunicalibras.entity.UsuarioEntity;
 import br.com.techhood.comunicalibras.mapper.UsuarioMapper;
 import br.com.techhood.comunicalibras.repository.UsuarioRepository;
 import br.com.techhood.comunicalibras.service.UsuarioService;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
@@ -37,7 +38,9 @@ public class UsuarioServiceImpl implements UsuarioService {
         objeto.setId(null);
         UsuarioEntity usuarioEntity = usuarioMapper.convert(objeto);
         usuarioEntity = usuarioRepository.save(usuarioEntity);
-        return usuarioMapper.convert(usuarioEntity);
+        usuarioEntity.setAvatar(avatarRequiredDefault(usuarioEntity));
+        objeto = usuarioMapper.convert(usuarioEntity);
+        return atualizarPorId(objeto.getId(), objeto);
     }
 
     @Override
@@ -54,7 +57,21 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public List<UsuarioDTO> buscar(UsuarioDTO objeto) {
-        Example<UsuarioEntity> exampleEntity = Example.of(usuarioMapper.convert(objeto));
+
+        UsuarioEntity usuarioEntity = usuarioMapper.convert(objeto);
+        usuarioEntity.setAvatar(avatarRequiredDefault(usuarioEntity));
+        Example<UsuarioEntity> exampleEntity = Example.of(usuarioEntity);
         return usuarioMapper.convert(usuarioRepository.findAll(exampleEntity));
+    }
+
+    private String avatarRequiredDefault(UsuarioEntity usuarioEntity) {
+        Long id = usuarioEntity.getId();
+        String avatar = usuarioEntity.getAvatar();
+
+        if (avatar == null || Strings.isBlank(avatar)) {
+            avatar = "https://i.pravatar.cc/300?img=" + id;
+        } else if (avatar == "-1" )
+            avatar = null;
+        return avatar;
     }
 }

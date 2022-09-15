@@ -25,6 +25,8 @@ public class LoginController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
+        usuarioDTO.setAvatar("-1");
+
         List<UsuarioDTO> usuarios = usuarioService.buscar(usuarioDTO);
         if (usuarios == null || usuarios.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);

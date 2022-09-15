@@ -44,19 +44,4 @@ public class UsuarioEntity {
 
     @Column(name = "url_avatar", length = 1000)
     private String avatar;
-
-    public String getAvatar() {
-        return avatarRequiredDefault(avatar);
-    }
-
-    private String avatarRequiredDefault(String avatar) {
-        if (avatar == null || Strings.isBlank(avatar)) {
-            avatar = "https://i.pravatar.cc/300";
-        }
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatarRequiredDefault(avatar);;
-    }
 }
