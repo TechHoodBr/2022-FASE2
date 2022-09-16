@@ -1,25 +1,20 @@
 package com.example.comunicalibras.screens.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.comunicalibras.MainActivity
 import com.example.comunicalibras.NavHostDirections
 import com.example.comunicalibras.R
 import com.example.comunicalibras.data.models.Professor
 import com.example.comunicalibras.databinding.FragmentHomeBinding
-import com.example.comunicalibras.databinding.FragmentLoginBinding
-import com.example.comunicalibras.screens.login.LoginFragmentDirections
-import com.example.comunicalibras.screens.login.LoginViewModel
 
 class HomeFragment : Fragment() {
 

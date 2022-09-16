@@ -19,4 +19,11 @@
     <string name="error_login">Login Inválido</string>
     <string name="error_nome">Nome Inválido</string>
     <string name="error_password">Senha Inválida</string>
+    <string name="sair">Sair</string>
+    <string name="aulas">Aulas</string>
+    <string name="assista_agora">Assista Agora</string>
+    <string name="foto_do_usuario">Foto do usuário</string>
+    <string name="t_tulo">Título</string>
+    <string name="professor">Professor:</string>
+    <string name="descricao">Descrição</string>
 </resources>

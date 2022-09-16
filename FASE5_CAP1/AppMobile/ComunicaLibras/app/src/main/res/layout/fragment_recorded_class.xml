@@ -30,7 +30,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:src="#B1B0B0"
-                android:contentDescription="" />
+                android:contentDescription="@string/foto_do_usuario" />
 
             <TextView
                 android:id="@+id/appBarTitle"
@@ -79,7 +79,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="Título"/>
+                android:text="@string/t_tulo"/>
 
             <TextView
                 android:id="@+id/classTeacher"
@@ -89,7 +89,7 @@
                 app:layout_constraintStart_toStartOf="@id/classTitle"
                 app:layout_constraintTop_toBottomOf="@id/classTitle"
                 app:layout_constraintEnd_toEndOf="@id/classTitle"
-                android:text="Professor: "/>
+                android:text="@string/professor"/>
 
             <VideoView
                 android:id="@+id/videoView"
@@ -106,13 +106,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/classTeacher" />
 
+            <ImageView
+                android:id="@+id/playIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="32dp"
+                app:layout_constraintTop_toTopOf="@id/videoView"
+                app:layout_constraintBottom_toBottomOf="@id/videoView"
+                android:src="@drawable/ic_baseline_play_circle_outline_24"
+                app:layout_constraintStart_toStartOf="@id/videoView"
+                app:layout_constraintEnd_toEndOf="@id/videoView"/>
+
             <TextView
                 android:id="@+id/classDescription"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="40dp"
-                android:text="Descrição"
+                android:text="@string/descricao"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/classTitle"

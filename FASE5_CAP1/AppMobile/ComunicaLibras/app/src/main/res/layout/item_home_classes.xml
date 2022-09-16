@@ -34,6 +34,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/dimCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#A9353333"/>
+
+            <ImageView
                 android:id="@+id/detailsBackground"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -78,7 +89,7 @@
                 android:ellipsize="end"
                 android:gravity="end"
                 android:lines="1"
-                android:text="Professor"
+                tools:text="Professor"
                 android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -86,6 +97,16 @@
                 app:layout_constraintEnd_toEndOf="@id/detailsBackground"
                 app:layout_constraintStart_toStartOf="@id/detailsBackground"
                 app:layout_constraintTop_toBottomOf="@id/teacherName" />
+
+            <ImageView
+                android:id="@+id/iconLive"
+                android:layout_width="70dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_live"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -94,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="16dp"
-        android:text="Assista Agora"
+        android:text="@string/assista_agora"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/videoButton"

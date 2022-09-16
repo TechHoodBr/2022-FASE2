@@ -2,25 +2,20 @@ package com.example.comunicalibras.screens.recordedClass
 
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.MediaController
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.comunicalibras.MainActivity
 import com.example.comunicalibras.NavHostDirections
 import com.example.comunicalibras.R
 import com.example.comunicalibras.data.models.Professor
-import com.example.comunicalibras.databinding.FragmentHomeBinding
 import com.example.comunicalibras.databinding.FragmentRecordedClassBinding
-import com.example.comunicalibras.screens.home.AulaAdapter
-import com.example.comunicalibras.screens.home.HomeViewModel
 
 class RecordedClassFragment : Fragment() {
 
@@ -64,6 +59,10 @@ class RecordedClassFragment : Fragment() {
             mediaController.setMediaPlayer(videoView)
             videoView.setMediaController(mediaController)
 
+            playIcon.setOnClickListener {
+                playIcon.visibility = GONE
+                videoView.start()
+            }
             videoView.setOnClickListener {
                 if (videoView.isPlaying) videoView.pause()
                 else videoView.start()

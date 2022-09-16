@@ -1,13 +1,18 @@
 package com.example.comunicalibras.screens.home
 
 import android.view.LayoutInflater
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.comunicalibras.R
 import com.example.comunicalibras.data.models.Aula
 import com.example.comunicalibras.databinding.ItemHomeClassesBinding
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class AulaAdapter : ListAdapter<Aula, AulaAdapter.AulaViewHolder>(AulaDiffCallback) {
 
@@ -24,7 +29,9 @@ class AulaAdapter : ListAdapter<Aula, AulaAdapter.AulaViewHolder>(AulaDiffCallba
         holder.bind(aula)
     }
 
-    inner class AulaViewHolder(val binding: ItemHomeClassesBinding) :
+    val formatter = DateTimeFormatter.ofPattern("dd/MM - HH:mm")
+
+    inner class AulaViewHolder(private val binding: ItemHomeClassesBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(aula: Aula) {
@@ -34,8 +41,21 @@ class AulaAdapter : ListAdapter<Aula, AulaAdapter.AulaViewHolder>(AulaDiffCallba
 
             binding.teacherName.text = aula.titulo
             binding.teacherCity.text = aula.professor.nome
-            binding.card.setOnClickListener { onClick(aula) }
-            binding.textCallNow.setOnClickListener { onClick(aula) }
+
+            if (aula.video == null) {
+                binding.dimCard.visibility = VISIBLE
+                binding.iconLive.visibility = VISIBLE
+                val localDateTime = LocalDateTime.parse(aula.liveInicio)
+                val output = formatter.format(localDateTime)
+                binding.textCallNow.text = output
+            } else {
+                binding.dimCard.visibility = GONE
+                binding.iconLive.visibility = GONE
+                binding.textCallNow.text = binding.root.context.getString(R.string.assista_agora)
+
+                binding.card.setOnClickListener { onClick(aula) }
+                binding.textCallNow.setOnClickListener { onClick(aula) }
+            }
         }
     }
 }
