@@ -72,8 +72,10 @@ class HomeFragment : Fragment() {
             adapter = aulaAdapter
         }
         aulaAdapter.onClick = { aula ->
-            val action = HomeFragmentDirections.actionHomeFragmentToRecordedClassFragment(aula)
-            findNavController().navigate(action)
+            aula.video?.let {
+                val action = HomeFragmentDirections.actionHomeFragmentToRecordedClassFragment(aula)
+                findNavController().navigate(action)
+            }
         }
     }
 

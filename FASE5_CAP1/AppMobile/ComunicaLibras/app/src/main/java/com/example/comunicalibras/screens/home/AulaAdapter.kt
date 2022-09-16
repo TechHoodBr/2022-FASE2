@@ -53,9 +53,9 @@ class AulaAdapter : ListAdapter<Aula, AulaAdapter.AulaViewHolder>(AulaDiffCallba
                 binding.iconLive.visibility = GONE
                 binding.textCallNow.text = binding.root.context.getString(R.string.assista_agora)
 
-                binding.card.setOnClickListener { onClick(aula) }
-                binding.textCallNow.setOnClickListener { onClick(aula) }
             }
+            binding.card.setOnClickListener { onClick(aula) }
+            binding.textCallNow.setOnClickListener { onClick(aula) }
         }
     }
 }
