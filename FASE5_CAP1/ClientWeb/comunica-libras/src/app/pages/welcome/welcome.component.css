@@ -1,0 +1,54 @@
+.title{
+    font-family: 'Anek Malayalam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 107px;
+
+    color: #003049;
+}
+
+.logo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+.comunica{
+    color: #D62828;
+
+}
+.libras{
+    margin-left: 0.2rem;
+    color: #003049;
+}
+
+.container-bk{
+    background: #EAE2B7 !important;
+    height: 50vw;
+}
+
+.btn {
+    width: 667px;
+    height: 81px;
+
+    
+    background: #F77F00;
+    border: 3px solid #F77F00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 112px;
+
+    width: 354px;
+    height: 66px;
+
+    font-family: 'Anek Malayalam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+  }
+  .btn:hover {
+    transition: 500ms;
+    opacity: 75%;
+  }

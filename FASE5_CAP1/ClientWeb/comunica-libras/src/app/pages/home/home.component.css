@@ -1,0 +1,51 @@
+*{
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+
+.pstrong1{
+    color: #003049;
+    font-family: 'Anek Malayalam';
+    font-size: 5.7rem;
+    font-weight: 700;
+    line-height: 65px;
+}
+.pstrong2{
+    color: #003049;
+    font-family: 'Anek Malayalam';
+    font-size: 5.7rem;
+    font-weight: 700;
+    line-height: 65px;
+}
+.plight{
+    line-height: 60px;
+    color: #003049;
+    font-family: 'Anek Malayalam';
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.main-conteudo{
+    width: 100%;
+}
+
+.conteudo{
+    width: 100%;
+    background-image: url(../../../assets/public/background.png);
+    image-rendering: -webkit-optimize-contrast !important;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+
+}
+.conteudo-2{
+    width: 100%;
+    height: 850px;
+    background-color: #31C3D8;
+    background-size: cover;
+}
+
+.container-tex{
+    padding: 20px;
+}

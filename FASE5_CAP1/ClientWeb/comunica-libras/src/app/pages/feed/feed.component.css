@@ -1,0 +1,91 @@
+.solid-background{
+    position: fixed;
+    top: 150px;
+    height: 45vw;
+    width: 100%;
+    background-color: rgba(246, 244, 231, 0.7);
+    border-radius: 40px 40px 0px 0px;
+}
+
+.background{
+    background-color: #EAE2B7;
+    height: 45vw;
+    width: 100%;
+}
+.btn-menu:focus{
+    width: 261px;
+    height: 47px;
+    background: #FCBF49;
+    border-radius: 122px;
+}
+
+.nav-link:active{
+    transition: 580ms;
+    background: #FCBF49 !important;
+}
+
+.nav-link:focus{
+    width: 261px;
+    height: 47px;
+    background: #FCBF49 !important;
+    border-radius: 122px;
+}
+
+.nav-feed{
+    color: #003049 !important;
+    width: 261px;
+    height: 47px;
+    background: #FCFAF3 !important;
+    border: 1px solid #F77F00;
+    border-radius: 122px;
+
+    font-family: 'Anek Malayalam';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-link{
+    background-color: transparent !important;
+}
+
+.btn-text{
+    justify-content: center;
+}
+
+.conteudo-tradutores{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card{
+    width: 200px;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.card>img{
+    margin: 5px;
+    padding: 25px;
+   width: 430px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   border-radius: 50px;
+   align-self: center;
+}
+
+.conteudo-aulas{
+    padding: 20px;
+}

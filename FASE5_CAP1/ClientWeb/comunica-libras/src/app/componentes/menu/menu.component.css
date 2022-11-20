@@ -1,0 +1,43 @@
+.logo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.7rem;
+}
+.comunica{
+    color: #D62828;
+    margin-left: 1rem;
+}
+.libras{
+    margin-left: 0.2rem;
+    color: #003049;
+}
+
+.navbar {
+    background-color: #EAE2B7;
+    padding: 2rem;
+}
+
+.entrar{
+    font-size: 1.2rem;
+    color: #003049;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    border: 2px solid #F77F00;
+    border-radius: 14px;
+    background: none;
+    padding: 1rem;
+}
+
+.cadastrar{
+    font-size: 1.2rem;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background: #F77F00;
+    border-radius: 14px;
+    border: 0;
+    padding: 1rem;
+}
+
