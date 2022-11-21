@@ -1,61 +1,104 @@
 <div class=" overflow-hidden">
-    <div class="row gx-5 ">
-      <div class="col-6 container-img">
-        <h1 style="color: #FFFFFF; margin-left: 25px;">O JEITO DIVERTIDO DE<br>
-          APRENDER LIBRAS</h1>
-          <img style="background-size: cover;" src="../../../assets/public/cell.png" alt="">
-    </div>
+  <div class="row gx-5 ">
+    <div class="col-6 container-img">
+      <h1 style="color: #FFFFFF; margin-left: 25px;">O JEITO DIVERTIDO DE<br>
+        APRENDER LIBRAS</h1>
+        <img style="background-size: cover;" src="../../../assets/public/cell.png" alt="">
+  </div>
 
-      <div class="col-4 container-form">
-        <div style="padding-bottom: 100px; display: flex; padding-top: 200px;">
-          <h2 class="logo" style="padding-left: 100px;"><span class="comunica">COMUNICA</span><span class="libras">LIBRAS</span></h2>
-          <a routerLink="/" style="text-decoration: none;"> <i class="fas fa-arrow-left" 
-            style="
-            margin-left: 250px;
-            font-size: 30px; 
-            cursor:pointer; 
-            display:flex; 
-            color: #F77F00"
-            ></i>
-         </a>
-        </div>
-        <div class="conteudo-form">
-        <h1 class=""><Strong>Cadastre-se</Strong></h1>
-        <div style="height: 10px"></div>
-        <div class="form-group">
-          <label for="nome">Nome de usuário</label>
-          <input
-            [(ngModel)]="usuario.login"
-            class="form-control"
-            type="text"
-            name="nome"
-            id="nome"
-            placeholder="Ex: João"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="senha">Senha</label>
-          <input
-            [(ngModel)]="usuario.senha"
-            class="form-control"
-            type="password"
-            name="senha"
-            id="senha"
-            placeholder="*******************"
-          />
-
-          <br/>
-          <div class="d-flex " >
-            
-            <button routerLink="/welcome" class="btn shadow" (click)="signUp()">Confirmar</button>
-         
-          </div>
-          <h6 style="padding: 15px; ">
-            Ja tem conta cadastrada? <a href="/login">Entrar</a>
-          </h6>
+    <div class="col-4 container-form">
+      <div style="padding-bottom: 30px; display: flex; padding-top: 100px;">
+        <h2 class="logo" style="padding-left: 100px;"><span class="comunica">COMUNICA</span><span class="libras">LIBRAS</span></h2>
+        <a routerLink="/" style="text-decoration: none;"> <i class="fas fa-arrow-left" 
+          style="
+          margin-left: 250px;
+          font-size: 30px; 
+          cursor:pointer; 
+          display:flex; 
+          color: #F77F00"
+          ></i>
+       </a>
       </div>
+      <div class="conteudo-form">
+      <h1 class=""><Strong>Cadastre-se</Strong></h1>
+      <div style="height: 10px"></div>
+      <div class="form-group">
+        <label for="nome">Nome usuário</label>
+        <input
+          [(ngModel)]="usuario.nome"
+          class="form-control"
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Ex: João"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="login">Login usuário</label>
+        <input
+          [(ngModel)]="usuario.login"
+          class="form-control"
+          type="text"
+          name="login"
+          id="login"
+          placeholder="Ex: João"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input
+          [(ngModel)]="usuario.senha"
+          class="form-control"
+          type="password"
+          name="senha"
+          id="senha"
+          placeholder="*******************"
+        />
     </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Tipo de usuário</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>1 - Aluno</option>
+          <option>2 - Professor</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Plano de usuário</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Básico</option>
+          <option>Avançado</option>
+          <option>Premium</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="avatar">Avatar</label>
+        <input
+          [(ngModel)]="usuario.avatar"
+          class="form-control"
+          type="password"
+          name="text"
+          id="avatar"
+          placeholder="url da imagem"
+        />
     </div>
+
+
+    <br/>
+    <div class="d-flex " >
+      
+      <button routerLink="/welcome" class="btn shadow" (click)="signUp()">Confirmar</button>
+   
+    </div>
+    <h6 style="padding: 15px; ">
+      Ja tem conta cadastrada? <a href="/login">Entrar</a>
+    </h6>
+    <div style="height: 50px;"></div>
+  </div>
+  </div>
 </div>
 
