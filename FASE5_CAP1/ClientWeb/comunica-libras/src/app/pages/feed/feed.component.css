@@ -1,16 +1,3 @@
-.solid-background{
-    top: 150px;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(246, 244, 231, 0.7);
-    border-radius: 40px 40px 0px 0px;
-}
-
-.background{
-    background-color: #EAE2B7;
-    height: 100%;
-    width: 100%;
-}
 .btn-menu:focus{
     width: 261px;
     height: 47px;
@@ -18,7 +5,7 @@
     border-radius: 122px;
 }
 
-.nav-link:active{
+.nav-link.active, .nav-link:active{
     transition: 580ms;
     background: #FCBF49 !important;
 }

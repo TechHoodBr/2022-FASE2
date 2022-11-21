@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ws: 'http://localhost:8002',
+  ws: 'http://fiap.msolutions.com.br:8002',
 };
 
 /*

@@ -1,18 +1,18 @@
 <!--Navbar-->
-<nav class="navbar fixed-top">
-  <div class="container-fluid">
-    <h2 routerLink="/" style="cursor: pointer;" class="logo"><span class="comunica">COMUNICA</span><span
-        class="libras">LIBRAS</span></h2>
-    <div class="d-flex mx-5">
-      <a class="navbar-brand fs-3 fw-bolder text-white" href="#">
-        <img class="img-fluid rounded-circle" width="50px" height="50px" [src]="usuario.avatar" alt="" />
-      </a>
-      <div>
-        <p style="font-weight: 600;">Olá, <strong>{{usuario.nome}}</strong></p>
-        <p style="line-height: 0"><span style="cursor: pointer; font-weight: 600;">Minha conta</span> | <span
-            (click)="logout()" style="cursor: pointer; font-weight: 600;">Sair</span></p>
+<div class=" container-feed">
+  <nav class="navbar fixed-top">
+    <div class="container-fluid">
+      <h2 routerLink="/" style="cursor: pointer;" class="logo"><span class="comunica">COMUNICA</span><span
+          class="libras">LIBRAS</span></h2>
+      <div class="d-flex mx-5">
+        <a class="navbar-brand fs-3 fw-bolder text-white" href="#">
+          <img class="img-fluid rounded-circle" width="50px" height="50px" [src]="usuario.avatar" alt="" />
+        </a>
+        <div>
+          <p style="font-weight: 600;">Olá, <strong>{{usuario.nome}}</strong></p>
+          <p style="line-height: 0"><span style="cursor: pointer; font-weight: 600;">Minha conta</span> | <span
+              (click)="logout()" style="cursor: pointer; font-weight: 600;">Sair</span></p>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-<div style="height: 100px;"></div>
+  </nav>

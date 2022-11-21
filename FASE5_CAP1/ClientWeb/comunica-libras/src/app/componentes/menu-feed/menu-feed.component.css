@@ -13,7 +13,7 @@
 }
 
 .navbar {
-    background-color: #EAE2B7;
+    background-color: #FCBF49;
     padding: 2rem;
 }
 
@@ -39,5 +39,9 @@
     border-radius: 14px;
     border: 0;
     padding: 1rem;
+}
+
+.container-feed {
+  margin-bottom: 120px;
 }
 

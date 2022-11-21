@@ -10,7 +10,9 @@ import { ClassroomService } from 'src/app/services/classroom.service';
   styleUrls: ['./feed.component.css'],
 })
 export class FeedComponent implements OnInit, OnDestroy {
+  scope = { filter: { item: 1, classroomsTemp: null } };
   classrooms: Aula[];
+  private _classroomsFilter: Aula[];
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   constructor(
@@ -27,13 +29,24 @@ export class FeedComponent implements OnInit, OnDestroy {
       });
   }
 
+  ngOnDestroy(): void {
+    this._unsubscribeAll.next(null);
+    this._unsubscribeAll.complete();
+  }
+
   redirecionar(classsroom: Aula) {
     if (classsroom.video !== null)
       this._router.navigate(['classroom', classsroom.id]);
   }
 
-  ngOnDestroy(): void {
-    this._unsubscribeAll.next(null);
-    this._unsubscribeAll.complete();
+  navItem(item) {
+    this.scope.filter.item = item;
+
+    if (item >= 2) {
+      this.scope.filter.classroomsTemp = this.classrooms;
+      this.classrooms.filter((item) => item.video !== null);
+    } else {
+      this.classrooms = this.scope.filter.classroomsTemp;
+    }
   }
 }
