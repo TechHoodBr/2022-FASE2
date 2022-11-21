@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 public class RestCrudController<T> implements CrudService<T> {
 
     protected CrudService<T> crudService;

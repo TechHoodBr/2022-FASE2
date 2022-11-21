@@ -1,7 +1,6 @@
 .solid-background{
-    position: fixed;
     top: 150px;
-    height: 45vw;
+    height: 100%;
     width: 100%;
     background-color: rgba(246, 244, 231, 0.7);
     border-radius: 40px 40px 0px 0px;
@@ -9,7 +8,7 @@
 
 .background{
     background-color: #EAE2B7;
-    height: 45vw;
+    height: 100%;
     width: 100%;
 }
 .btn-menu:focus{
@@ -63,12 +62,12 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    
+
 }
 
 .card{
     width: 200px;
-    
+
     background-color: transparent;
     border: none;
     border-radius: 50%;
@@ -88,4 +87,42 @@
 
 .conteudo-aulas{
     padding: 20px;
+}
+
+.card-title {
+  position: relative;
+  top: -100px;
+  background: #fcbf49ba;
+  border-radius: 10px;
+  width: 350px;
+}
+
+.card-subtitle {
+  position: relative;
+  top: -50px;
+  left: 120px;
+}
+
+.card-subtitle-live {
+  position: relative;
+  top: -50px;
+  left: 17px;
+  text-transform: capitalize;
+}
+
+.img-tradutor {
+  border-radius: 40px;
+}
+
+.card-live {
+  position: relative;
+  top: -490px;
+  left: 10px;
+  background: #e11717ba;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
 }

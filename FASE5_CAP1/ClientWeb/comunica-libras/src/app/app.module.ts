@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +14,12 @@ import { MenuFeedComponent } from './componentes/menu-feed/menu-feed.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { ClassroomService } from './services/classroom.service';
+import { ClassroomComponent } from './pages/classroom/classroom.component';
+import localePt from '@angular/common/locales/pt-PT';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -25,9 +31,16 @@ import { CookieService } from 'ngx-cookie-service';
     WelcomeComponent,
     FeedComponent,
     MenuFeedComponent,
+    ClassroomComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [UserService, CookieService, HttpClientModule],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    UserService,
+    ClassroomService,
+    CookieService,
+    HttpClientModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

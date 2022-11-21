@@ -1,0 +1,33 @@
+<app-menu-feed></app-menu-feed>
+<div class="background">
+  <div class="solid-background ">
+    <div style="height: 100px;"></div>
+
+    <!--Conteúdo-->
+    <div class="container">
+      <div class="row">
+        <div class="col-1 align-self-start">
+          <a routerLink="/feed" style="text-decoration: none;">
+            <i class="fas fa-arrow-left" style="font-size: 30px;cursor:pointer;;color: #F77F00"></i>
+          </a>
+        </div>
+        <div class="col">
+          <h2>{{classroom.titulo}}
+          </h2>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col p-5" style="text-align: center">
+          <video [title]="classroom.titulo" muted autoplay width="650px" controls>
+            <source src="{{classroom.video}}" type='video/mp4' />
+          </video>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span [innerHTML]="classroom.descricao"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
