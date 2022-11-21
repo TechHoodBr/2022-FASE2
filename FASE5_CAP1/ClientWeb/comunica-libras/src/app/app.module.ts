@@ -11,6 +11,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { FeedComponent } from './pages/feed/feed.component';
 import { MenuFeedComponent } from './componentes/menu-feed/menu-feed.component';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,10 @@ import { MenuFeedComponent } from './componentes/menu-feed/menu-feed.component';
     RegisterComponent,
     WelcomeComponent,
     FeedComponent,
-    MenuFeedComponent
+    MenuFeedComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [UserService, CookieService, HttpClientModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

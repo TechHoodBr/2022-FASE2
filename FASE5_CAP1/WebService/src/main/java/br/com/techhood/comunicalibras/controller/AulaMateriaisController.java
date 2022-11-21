@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/aulaMateriais")
 public class AulaMateriaisController extends RestCrudController<AulaMateriaisDTO> {
