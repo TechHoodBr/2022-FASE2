@@ -5,4 +5,7 @@ RM88838 - Thais Brasil Lenhard
 RM86992 - Wellington dos Santos Ramos
 
 Repositório: 
-https://github.com/TechHoodBr/2022-FASE2
+https://github.com/TechHoodBr/2022-FASE6
+
+No ar ( Apk + FrontEnd + BackEnd [API] ):
+http://fiap.msolutions.com.br
