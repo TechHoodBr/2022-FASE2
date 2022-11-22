@@ -19,8 +19,7 @@
       <div class="row ">
         <div class="col p-5" style="text-align: center">
           <video [title]="classroom.titulo" muted autoplay width="650px" controls>
-            <source src="http://fiap.msolutions.com.br:8002/aula/4/arquivo/4 - O alfabeto manual.mp4"
-              type='video/mp4' />
+            <source [src]="classroom.video" type='video/mp4' />
           </video>
         </div>
       </div>

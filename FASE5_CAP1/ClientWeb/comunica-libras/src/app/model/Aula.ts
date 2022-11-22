@@ -7,5 +7,5 @@ export class Aula {
   public live_inicio: Date;
   public live_fim: Date;
   public descricao: string;
-  public video: string;
+  public video: string | ArrayBuffer;
 }

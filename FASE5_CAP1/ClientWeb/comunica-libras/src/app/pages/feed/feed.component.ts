@@ -44,7 +44,7 @@ export class FeedComponent implements OnInit, OnDestroy {
 
     if (item >= 2) {
       this.scope.filter.classroomsTemp = this.classrooms;
-      this.classrooms.filter((item) => item.video !== null);
+      this.classrooms = this.classrooms.filter((item) => item.video !== null);
     } else {
       this.classrooms = this.scope.filter.classroomsTemp;
     }

@@ -30,7 +30,7 @@ class Service {
         .build()
 
     private val api: ApiService = Retrofit.Builder()
-        .baseUrl("http://192.168.0.181:8002")
+        .baseUrl("http://msolutions.com.br:8080")
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

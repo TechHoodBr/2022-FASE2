@@ -8,6 +8,7 @@ import br.com.techhood.comunicalibras.storage.StorageProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -42,13 +43,21 @@ public class AulaController extends RestCrudController<AulaDTO> {
         return arquivos;
     }
 
-    @GetMapping("/{id}/arquivo/{arquivo:.+}")
+    @GetMapping(value = "/{id}/arquivo/{arquivo:.+}")
     @ResponseBody
     public ResponseEntity<Resource> servidorArquivo(@PathVariable("id") Long id, @PathVariable("arquivo") String arquivo) {
         FileSystemStorageService fileSystemStorageService = new FileSystemStorageService(properties, pastaUpload + id);
         Resource file = fileSystemStorageService.loadAsResource(arquivo);
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    }
+
+    @GetMapping(value = "/{id}/video/{arquivo:.+}", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    @ResponseBody
+    public ResponseEntity<Resource> servidorArquivoVideo(@PathVariable("id") Long id, @PathVariable("arquivo") String arquivo) {
+        FileSystemStorageService fileSystemStorageService = new FileSystemStorageService(properties, pastaUpload + id);
+        Resource file = fileSystemStorageService.loadAsResource(arquivo);
+        return ResponseEntity.ok().body(file);
     }
 
     @PostMapping("/{id}/arquivo")
